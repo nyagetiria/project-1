@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Tune-Town | Musical Instruments</title>
+  <link rel="stylesheet" href="./styles.css" />
+</head>
+<body>
+  <header>
+    <h1>Tune-Town 🎶</h1>
+    <p>Your one-stop shop for quality musical instruments</p>
+  </header>
+
+  <main>
+    <section class="search-section">
+      <input type="text" id="searchInput" placeholder="Search instruments by name..." />
+    </section>
+
+    <section>
+      <h2>Available Instruments</h2>
+      <div id="instrument-list" class="grid-container"></div>
+    </section>
+
+    <section class="form-section">
+      <h2>Add New Instrument</h2>
+      <form id="instrumentForm">
+        <input type="text" id="name" placeholder="Instrument Name" required />
+        <input type="text" id="description" placeholder="Description" required />
+        <input type="number" id="price" placeholder="Price ($)" required />
+        <input type="url" id="image" placeholder="Image URL" required />
+        <button type="submit">Add Instrument</button>
+      </form>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 Tune-Town. All rights reserved.</p>
+  </footer>
+
+  <script src="./index.js"></script>
+</body>
+</html>
