@@ -1,29 +1,26 @@
-* {
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
-}
 
-body {
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  background-color: whitesmoke;
-  color: #333;
-  padding: 1rem;
-}
-
-header {
-  background-color: rgb(78, 21, 78);
-  color: white;
-  text-align: center;
-  padding: 2rem 1rem;
-  margin-bottom: 2rem;
-  border-radius: 10px;
-}
-
-header h1 {
-  font-size: 2.5rem;
-  margin-bottom: 0.5rem;
-}
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+    body {
+      font-family: 'Poppins', sans-serif;
+      background-color: #f9fafc;
+      color: #333;
+      line-height: 1.6;
+    }
+    header {
+      background: linear-gradient(to right, #1f2937, #4b5563);
+      color: #fff;
+      padding: 2rem;
+      text-align: center;
+      border-bottom: 5px solid #ff6600;
+    }
+    header h1 {
+      font-size: 2.5rem;
+      margin-bottom: 0.5rem;
+    }
 
 header p {
   font-size: 1.2rem;
