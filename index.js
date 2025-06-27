@@ -7,7 +7,6 @@ document.addEventListener('DOMContentLoaded', () => {
   const searchInput = document.getElementById('searchInput');
   searchInput.addEventListener('input', handleSearchInput);
 
-  // Load cart from localStorage
   loadCartFromStorage();
   updateCart();
 });
@@ -18,7 +17,6 @@ let cart = [];
 const cartList = document.getElementById('cart-list');
 const cartTotal = document.getElementById('cart-total');
 
-// Fetch instruments from server
 function fetchInstruments() {
   fetch('http://localhost:3000/instruments')
     .then(res => res.json())
@@ -29,7 +27,6 @@ function fetchInstruments() {
     .catch(err => console.error('Error fetching instruments:', err));
 }
 
-// Display all or filtered instruments
 function displayInstruments(instruments) {
   const list = document.getElementById('instrument-list');
   list.innerHTML = '';
@@ -50,7 +47,6 @@ function displayInstruments(instruments) {
   });
 }
 
-// Add new instrument to server and display
 function handleFormSubmit(e) {
   e.preventDefault();
 
@@ -80,7 +76,6 @@ function handleFormSubmit(e) {
     .catch(err => console.error('Error adding instrument:', err));
 }
 
-// Filter instruments based on search input
 function handleSearchInput(e) {
   const searchTerm = e.target.value.toLowerCase();
   const filtered = allInstruments.filter(inst =>
@@ -89,7 +84,6 @@ function handleSearchInput(e) {
   displayInstruments(filtered);
 }
 
-// Listen for cart button clicks globally
 document.addEventListener('click', e => {
   if (e.target.classList.contains('add-to-cart')) {
     const id = e.target.dataset.id;
@@ -109,7 +103,6 @@ document.addEventListener('click', e => {
   }
 });
 
-// Render cart items and update total
 function updateCart() {
   if (!cartList || !cartTotal) return;
 
@@ -129,12 +122,10 @@ function updateCart() {
   cartTotal.textContent = `Total: $${total.toFixed(2)}`;
 }
 
-// Save cart to localStorage
 function saveCartToStorage() {
   localStorage.setItem('cart', JSON.stringify(cart));
 }
 
-// Load cart from localStorage
 function loadCartFromStorage() {
   const savedCart = localStorage.getItem('cart');
   if (savedCart) {
@@ -146,3 +137,4 @@ function loadCartFromStorage() {
     }
   }
 }
+
